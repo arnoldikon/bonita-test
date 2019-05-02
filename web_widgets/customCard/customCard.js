@@ -1,0 +1,16 @@
+(function () {
+  try {
+    return angular.module('bonitasoft.ui.widgets');
+  } catch(e) {
+    return angular.module('bonitasoft.ui.widgets', []);
+  }
+})().directive('customCard', function() {
+    return {
+      controllerAs: 'ctrl',
+      controller: 
+function ($scope) {
+
+},
+      template: '<span ng-if="environment"><identicon name="{{environment.component.id}}" size="30" background-color="[255,255,255, 0]" foreground-color="[51,51,51]"></identicon> {{environment.component.name}}</span>\n\n<!-- Style 1 -->\n<div class="panel" ng-if="properties.cardStyle==1">\n    <div class="panel-body">\n        <div class="row">\n            <div class="col-xs-8" align="left">\n                <font size="5"><span>{{properties.value}}</span></font>\n                    <font size="2"><p>{{properties.title}}</p></font>\n            </div>\n            <div class="col-xs-4" align="right">\n                <i class="{{properties.iconClass}} text-{{properties.style}}"></i>\n            </div>\n        </div>\n    </div>\n</div>\n\n<!-- Style 2 -->\n<div class="panel" ng-if="properties.cardStyle==2">\n    <div class="panel-body">\n        <div class="row">\n            <div class="col-xs-3" align="center">\n                <span class="{{properties.iconClass}} text-{{properties.style}}"></span>\n            </div>\n            <div class="col-xs-9" align="right ">\n                <span class="text-right"><font size="2">{{properties.title}}<br/></font>\n                <font size="5"><b>{{properties.value}}</b></font></span>\n            </div>\n        </div>\n    </div>\n</div>\n\n<!-- Style 3 -->\n<div class="panel" ng-if="properties.cardStyle==3">\n    <div class="panel-body">\n        <div class="row">\n            <font size="2"><i class="{{properties.iconClass}} text-{{properties.style}}"></i> {{properties.title}}<br/></font>\n            <font size="5"><b>{{properties.value}}</b></font>\n        </div>\n    </div>\n</div>\n\n<!-- Style 4 -->\n<div class="panel" ng-if="properties.cardStyle==4">\n    <div class="panel-heading">\n        <div class="row">\n            <i class="{{properties.iconClass}} text-{{properties.style}}"></i><br/>\n            <font size="5">{{properties.value}}</font><br/>\n            <font size="2">{{properties.title}}</font>\n        </div>\n    </div>\n</div>\n\n<!-- Style 5 -->\n<div class="panel" ng-if="properties.cardStyle==5">\n    <div class="panel-heading" align="center">\n        <div class="row">\n            <i class="{{properties.iconClass}} text-{{properties.style}}"></i><br/>\n            <font size="5">{{properties.value}}</font><br/>\n            <font size="2">{{properties.title}}</font>\n        </div>\n    </div>\n</div>\n\n<!-- Style 6 -->\n<div class="panel" ng-if="properties.cardStyle==6">\n    <div class="panel-body">\n        <div>\n            <font size="2"><p  class="text-{{properties.style}}">{{properties.title}}</p></font>\n        </div>\n        <div class="row">\n            <div class="col-xs-3" align="left">\n                <i class="{{properties.iconClass}} text-{{properties.style}}"></i>\n            </div>\n            <div class="col-xs-9" align="right">\n                <font size="5"><span>{{properties.value}}</span></font>\n            </div>\n        </div>\n    </div>\n</div>\n'
+    };
+  });

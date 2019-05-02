@@ -1,0 +1,53 @@
+{
+  "designerVersion" : "1.7.69",
+  "id" : "customCardColor",
+  "name" : "cardColor",
+  "lastUpdate" : 1542343986131,
+  "template" : "<span ng-if=\"environment\"><identicon name=\"{{environment.component.id}}\" size=\"30\" background-color=\"[255,255,255, 0]\" foreground-color=\"[51,51,51]\"></identicon> {{environment.component.name}}</span>\n\n<!-- Style 1 -->\n<div class=\"panel panel-{{properties.style}}\" ng-if=\"properties.cardStyle==1\">\n    <div class=\"panel-heading\">\n        <div class=\"row\">\n            <div class=\"col-xs-8\" align=\"left \">\n                <font size=\"5\"><span>{{properties.value}}</span></font>\n                    <font size=\"2\"><p>{{properties.title}}</p></font>\n            </div>\n            <div class=\"col-xs-4\" align=\"right\">\n                <i class=\"{{properties.iconClass}}\"></i>\n            </div>\n        </div>\n    </div>\n</div>\n\n<!-- Style 2 -->\n<div class=\"panel panel-{{properties.style}}\" ng-if=\"properties.cardStyle==2\">\n    <div class=\"panel-heading\">\n        <div class=\"row\">\n            <div class=\"col-xs-3\" align=\"center\">\n                <span class=\"{{properties.iconClass}}\"></span>\n            </div>\n            <div class=\"col-xs-9\" align=\"right \">\n                <span class=\"text-right\"><font size=\"2\">{{properties.title}}<br/></font>\n                <font size=\"5\"><b>{{properties.value}}</b></font></span>\n            </div>\n        </div>\n    </div>\n</div>\n\n<!-- Style 3 -->\n<div class=\"panel panel-{{properties.style}}\" ng-if=\"properties.cardStyle==3\">\n    <div class=\"panel-heading\">\n        <div>\n            <font size=\"2\"><i class=\"{{properties.iconClass}}\"></i> {{properties.title}}<br/></font>\n            <font size=\"5\"><b>{{properties.value}}</b></font>\n        </div>\n    </div>\n</div>\n\n<!-- Style 4 -->\n<div class=\"panel panel-{{properties.style}}\" ng-if=\"properties.cardStyle==4\">\n    <div class=\"panel-heading\">\n        <div>\n            <i class=\"{{properties.iconClass}}\"></i><br/>\n            <font size=\"5\">{{properties.value}}</font><br/>\n            <font size=\"2\">{{properties.title}}</font>\n        </div>\n    </div>\n</div>\n\n<!-- Style 5 -->\n<div class=\"panel panel-{{properties.style}}\" ng-if=\"properties.cardStyle==5\">\n    <div class=\"panel-heading\" align=\"center\">\n        <div class=\"row\">\n            <i class=\"{{properties.iconClass}}\"></i><br/>\n            <font size=\"5\">{{properties.value}}</font><br/>\n            <font size=\"2\">{{properties.title}}</font>\n        </div>\n    </div>\n</div>\n\n<!-- Style 6 -->\n<div class=\"panel panel-{{properties.style}}\" ng-if=\"properties.cardStyle==6\">\n    <div class=\"panel-heading\">\n        <div>\n            <font size=\"2\"><p>{{properties.title}}</p></font>\n        </div>\n        <div class=\"row\">\n            <div class=\"col-xs-3\" align=\"left\">\n                <i class=\"{{properties.iconClass}}\"></i>\n            </div>\n            <div class=\"col-xs-9\" align=\"right\">\n                <font size=\"5\"><span>{{properties.value}}</span></font>\n            </div>\n        </div>\n    </div>\n</div>\n\n<!-- Style 7 -->\n<div class=\"panel panel-{{properties.style}}\" ng-if=\"properties.cardStyle==7\">\n    <div class=\"panel-heading\">\n        <div class=\"row\">\n            <div class=\"col-xs-8\" align=\"left\">\n                <font size=\"5\"><span><b>{{properties.value}}</b></span></font><br/>\n                <font size=\"2\"><p>{{properties.title}}</p></font>\n            </div>\n            <div class=\"col-xs-4\" align=\"right\">\n                <span class=\"{{properties.iconClass}} text-center\"></span>\n            </div>\n        </div>\n    </div>\n</div>",
+  "controller" : "\nfunction ($scope) {\n\n}",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "Icon Class",
+    "name" : "iconClass",
+    "caption" : "Glyphicon or font awesome class",
+    "type" : "text",
+    "defaultValue" : "fa fa-arrow-up fa-2x",
+    "bond" : "expression"
+  }, {
+    "label" : "Card Style",
+    "name" : "cardStyle",
+    "type" : "choice",
+    "defaultValue" : "1",
+    "choiceValues" : [ "1", "2", "3", "4", "5", "6", "7" ],
+    "bond" : "expression"
+  }, {
+    "label" : "Style",
+    "name" : "style",
+    "type" : "choice",
+    "defaultValue" : "primary",
+    "choiceValues" : [ "default", "primary", "info", "success", "warning", "danger" ],
+    "bond" : "expression"
+  }, {
+    "label" : "Title",
+    "name" : "title",
+    "type" : "text",
+    "defaultValue" : "Total Income",
+    "bond" : "expression"
+  }, {
+    "label" : "Value",
+    "name" : "value",
+    "type" : "text",
+    "defaultValue" : "$781,876",
+    "bond" : "expression"
+  } ],
+  "assets" : [ {
+    "id" : "445fd091-a2a1-47c6-b1b3-b89a823ad113",
+    "name" : "fontawesome-all.js",
+    "type" : "js",
+    "order" : 1,
+    "external" : false
+  } ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

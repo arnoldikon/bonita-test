@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="KUBIK" description="Kubik Software Organization">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="kubik.admin">
+      <firstName>KUBIK</firstName>
+      <lastName>Administrator</lastName>
+      <title>Mr</title>
+      <jobTitle>Owner</jobTitle>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">kubik.admin</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="administrator">
+      <displayName>Administrator</displayName>
+    </role>
+    <role name="member">
+      <displayName>Member</displayName>
+    </role>
+    <role name="viewer">
+      <displayName>Viewer</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="kubik">
+      <displayName>KUBIK</displayName>
+    </group>
+    <group name="administrator" parentPath="/kubik">
+      <displayName>Administrator</displayName>
+    </group>
+    <group name="finance" parentPath="/kubik">
+      <displayName>Finance</displayName>
+    </group>
+    <group name="logistic" parentPath="/kubik">
+      <displayName>Logistic</displayName>
+    </group>
+    <group name="cs" parentPath="/kubik">
+      <displayName>Customer Service</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>kubik.admin</userName>
+      <roleName>administrator</roleName>
+      <groupName>administrator</groupName>
+      <groupParentPath>/kubik</groupParentPath>
+    </membership>
+  </memberships>
+</organization:Organization>

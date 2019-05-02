@@ -1,0 +1,173 @@
+{
+  "designerVersion" : "1.8.31",
+  "id" : "Action",
+  "name" : "Action",
+  "lastUpdate" : 1556765947401,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "header" : {
+        "type" : "constant",
+        "value" : "Action"
+      },
+      "subHeader" : {
+        "type" : "constant"
+      },
+      "iconClass" : {
+        "type" : "constant",
+        "value" : "fas fa-desktop"
+      }
+    },
+    "reference" : "93fa1d69-06ff-4046-9788-3664706db27b",
+    "hasValidationError" : false,
+    "id" : "customHeader"
+  } ], [ {
+    "type" : "formContainer",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "6511524f-ea3c-4c80-bfac-01b4c600acf4",
+    "hasValidationError" : false,
+    "id" : "pbFormContainer",
+    "container" : {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : { },
+      "reference" : "8fb3c6b7-d139-419d-a6b2-9c793d0a5b1d",
+      "hasValidationError" : false,
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : "listAvailableProcess"
+          }
+        },
+        "reference" : "a9a3249c-425c-4da1-a94e-8e70ff25b62d",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 1
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : "hidden-lg hidden-md"
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : ""
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 2"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            }
+          },
+          "reference" : "3c6805cd-0b58-409f-89e9-3c86c213834d",
+          "hasValidationError" : false,
+          "id" : "pbTitle"
+        }, {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 11
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "allowHTML" : {
+              "type" : "constant",
+              "value" : true
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "<h5><b><a href={{$item.processURL}} target=\"_self\">{{$item.displayName}}</a></b></h5>\n{{$item.displayDescription}}<br/>Version {{$item.version}}<br/>"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            }
+          },
+          "reference" : "1d00d8ab-1121-4848-b263-6ca260b68142",
+          "hasValidationError" : false,
+          "id" : "pbText"
+        } ] ]
+      } ] ]
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "a3fe81c9-637d-4aa6-924c-66b17985ac84",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "listProcess" : {
+      "type" : "url",
+      "value" : "../API/bpm/process?p=0&c=5000",
+      "exposed" : false
+    },
+    "listAvailableProcess" : {
+      "type" : "expression",
+      "value" : "return getURLProcess($data.listProcess);",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "09c91e3d-34d5-41f7-91c9-ead140bfda62",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer",
+  "displayName" : "Action"
+}

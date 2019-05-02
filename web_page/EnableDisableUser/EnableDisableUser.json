@@ -1,0 +1,858 @@
+{
+  "designerVersion" : "1.8.29",
+  "previousDesignerVersion" : "1.7.69",
+  "id" : "EnableDisableUser",
+  "name" : "EnableDisableUser",
+  "lastUpdate" : 1547182984514,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "header" : {
+        "type" : "constant",
+        "value" : "Enable / Disable User"
+      },
+      "subHeader" : {
+        "type" : "constant",
+        "value" : "Set on / off switch to enable / disable user"
+      },
+      "iconClass" : {
+        "type" : "constant",
+        "value" : "fas fa-user-lock"
+      }
+    },
+    "reference" : "b87c7474-5f99-4556-90c8-31aade29eecf",
+    "hasValidationError" : false,
+    "id" : "customHeader"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "<i class=\"fas fa-arrow-alt-circle-left\"></i> Back"
+      },
+      "type" : {
+        "type" : "constant",
+        "value" : "URL"
+      },
+      "targetUrl" : {
+        "type" : "expression",
+        "value" : "senderUrl"
+      },
+      "pageToken" : {
+        "type" : "constant"
+      },
+      "processName" : {
+        "type" : "constant"
+      },
+      "processVersion" : {
+        "type" : "constant"
+      },
+      "taskId" : {
+        "type" : "constant"
+      },
+      "caseId" : {
+        "type" : "constant"
+      },
+      "target" : {
+        "type" : "constant",
+        "value" : "_parent"
+      },
+      "appToken" : {
+        "type" : "constant"
+      },
+      "urlParams" : {
+        "type" : "constant"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "buttonStyle" : {
+        "type" : "constant",
+        "value" : "link"
+      }
+    },
+    "reference" : "ef77117c-d55e-42dd-aea7-14b397ba777d",
+    "hasValidationError" : false,
+    "id" : "pbLink"
+  } ], [ {
+    "type" : "formContainer",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "ad7b5ded-8219-4ada-b356-9cfe04471cde",
+    "hasValidationError" : false,
+    "id" : "pbFormContainer",
+    "container" : {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : { },
+      "reference" : "831ad56d-f410-4505-bf6e-c173a47b3e34",
+      "hasValidationError" : false,
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "<i class=\"fas fa-search\"></i> Search"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "search"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          }
+        },
+        "reference" : "ba1a6fc7-6d8c-4d21-84f1-925f61ce9513",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      } ], [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 2"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "c1e589bd-7827-4f8c-be64-14b9b5a94742",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      } ], [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "visible-lg visible-md"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "90266282-e522-4445-9caa-f0c88a65a1b9",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 6
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "repeatedCollection" : {
+              "type" : "variable",
+              "value" : "listUser | filter : search"
+            }
+          },
+          "reference" : "82274352-d7c1-41a1-bc28-ba9284039947",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "container",
+            "dimension" : {
+              "xs" : 11
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : "roundbox"
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "repeatedCollection" : {
+                "type" : "variable",
+                "value" : ""
+              }
+            },
+            "reference" : "b18bda55-4c04-4559-8f74-3198f7ac4f45",
+            "hasValidationError" : false,
+            "id" : "pbContainer",
+            "rows" : [ [ {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "601cea1b-d744-4833-ad2c-9caf4ff8b1b4",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            } ], [ {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "srcType" : {
+                  "type" : "constant",
+                  "value" : "Asset"
+                },
+                "url" : {
+                  "type" : "constant"
+                },
+                "assetName" : {
+                  "type" : "expression",
+                  "value" : "$item.title=='' ? 'mr.png' : ($item.title | lowercase)+'png'"
+                },
+                "alt" : {
+                  "type" : "interpolation"
+                }
+              },
+              "reference" : "0bf9fe9d-83bb-4646-b51e-fbd3039edea7",
+              "hasValidationError" : false,
+              "id" : "pbImage"
+            }, {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 9
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "5859a4f4-6f30-4df1-92d0-e3c00353b885",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [ [ {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 8
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "<font size=\"4\">{{$item.userName}}</font><br/>\n{{$item.firstname}} {{$item.lastname}}<br/>\n<font size=\"1\"><i>Last login :{{$item.last_connection}}</font>"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "fe750eed-4e1d-4c9d-9c1f-0de61bc934ce",
+                "hasValidationError" : false,
+                "id" : "pbText"
+              }, {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 4
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "06cf1724-eca2-4a54-980f-ba95f003c96e",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [ [ {
+                  "type" : "component",
+                  "dimension" : {
+                    "xs" : 12
+                  },
+                  "propertyValues" : {
+                    "cssClasses" : {
+                      "type" : "constant",
+                      "value" : ""
+                    },
+                    "hidden" : {
+                      "type" : "constant",
+                      "value" : false
+                    },
+                    "label" : {
+                      "type" : "constant",
+                      "value" : ""
+                    },
+                    "value" : {
+                      "type" : "variable",
+                      "value" : "$item.enabled"
+                    },
+                    "url" : {
+                      "type" : "expression",
+                      "value" : "\"../API/identity/user/\"+$item.id"
+                    },
+                    "dataSend" : {
+                      "type" : "expression",
+                      "value" : "{ \"id\":$item.id,\"enabled\":$item.enabled.toString()}"
+                    }
+                  },
+                  "reference" : "585aea92-333e-4c94-aa3a-f96955c5d51e",
+                  "hasValidationError" : false,
+                  "id" : "customSwitchPutService"
+                } ] ]
+              } ] ]
+            } ], [ {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "fae68a29-2291-4b21-8326-8ab41208d4c4",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            } ] ]
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "text" : {
+                "type" : "interpolation",
+                "value" : ""
+              },
+              "level" : {
+                "type" : "constant",
+                "value" : "Level 2"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "left"
+              }
+            },
+            "reference" : "4028042e-20d1-43a4-a31a-c6824cc79b18",
+            "hasValidationError" : false,
+            "id" : "pbTitle"
+          } ] ]
+        } ] ]
+      } ], [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "visible-sm visible-xs"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "99263681-5e09-4cfc-b58a-7586df4c7f7b",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "repeatedCollection" : {
+              "type" : "variable",
+              "value" : "listUser | filter : search"
+            }
+          },
+          "reference" : "0fb88d82-39bf-45ab-b91b-2ded029565f7",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "container",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : "roundbox"
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "repeatedCollection" : {
+                "type" : "variable",
+                "value" : ""
+              }
+            },
+            "reference" : "d126d85c-aa14-41f9-ab2b-a69cb43f564d",
+            "hasValidationError" : false,
+            "id" : "pbContainer",
+            "rows" : [ [ {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "c22df334-4c72-4535-855e-b3f430fd6e0c",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            } ], [ {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "srcType" : {
+                  "type" : "constant",
+                  "value" : "Asset"
+                },
+                "url" : {
+                  "type" : "constant"
+                },
+                "assetName" : {
+                  "type" : "expression",
+                  "value" : "$item.title=='' ? 'mr.png' : ($item.title | lowercase)+'png'"
+                },
+                "alt" : {
+                  "type" : "interpolation"
+                }
+              },
+              "reference" : "a9a04a00-6a52-423a-ba78-8358689ec9cf",
+              "hasValidationError" : false,
+              "id" : "pbImage"
+            }, {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 9
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "0c77ee2c-6543-407f-86ec-d211b95de001",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [ [ {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 8
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "<font size=\"5\">{{$item.userName}}</font><br/>\n{{$item.firstname}} {{$item.lastname}}<br/>\n<font size=\"1\"><i>Last login :{{$item.last_connection}}</font>"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "f53b1eb7-11c1-4b50-a170-90a44ad25538",
+                "hasValidationError" : false,
+                "id" : "pbText"
+              }, {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 4
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "$item.enabled"
+                  },
+                  "url" : {
+                    "type" : "expression",
+                    "value" : "\"../API/identity/user/\"+$item.id"
+                  },
+                  "dataSend" : {
+                    "type" : "expression",
+                    "value" : "{ \"id\":$item.id,\"enabled\":$item.enabled.toString()}"
+                  }
+                },
+                "reference" : "9ebb99bb-41ef-428f-84dd-2847d025f795",
+                "hasValidationError" : false,
+                "id" : "customSwitchPutService"
+              } ] ]
+            } ], [ {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "visible-sm visible-xs"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "bd7f7b62-71a7-4a85-be1a-b81f558aef25",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            } ] ]
+          } ] ]
+        } ] ]
+      } ] ]
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "211eb28f-5abb-4131-9081-d4bce615f9b4",
+    "name" : "userAvatar.png",
+    "type" : "img",
+    "order" : 1,
+    "external" : false
+  }, {
+    "id" : "058df9c4-a4e7-4ce3-855b-701610e38874",
+    "name" : "Arnold.jpg",
+    "type" : "img",
+    "order" : 2,
+    "external" : false
+  }, {
+    "id" : "7e36e5da-0acf-406e-9215-b4697ecef231",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  }, {
+    "id" : "0e457802-f1dc-4597-bde2-b28053d1fd65",
+    "name" : "ms.png",
+    "type" : "img",
+    "order" : 4,
+    "external" : false
+  }, {
+    "id" : "9e57f41a-f89d-42f5-9e41-d51ca26912e8",
+    "name" : "mr.png",
+    "type" : "img",
+    "order" : 3,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "listUser" : {
+      "type" : "url",
+      "value" : "../API/identity/user?p={{record.p}}&c={{record.c}}&o=userName%20ASC",
+      "exposed" : false
+    },
+    "userLogin" : {
+      "type" : "url",
+      "value" : "../API/system/session/1",
+      "exposed" : false
+    },
+    "response" : {
+      "type" : "json",
+      "value" : "{\n    \"general\":{\"success\":null,\"failed\" :null},\n    \"password\":{\"success\":null,\"failed\" :null},\n    \"personal\":{\"success\":null,\"failed\" :null},\n    \"business\":{\"success\":null,\"failed\" :null}\n}",
+      "exposed" : false
+    },
+    "personal" : {
+      "type" : "url",
+      "value" : "../API/identity/personalcontactdata/{{userLogin.user_id}}",
+      "exposed" : false
+    },
+    "curWindow" : {
+      "type" : "expression",
+      "value" : "return window.location.self;",
+      "exposed" : false
+    },
+    "record" : {
+      "type" : "json",
+      "value" : "{\n    \"p\":0,\n    \"c\":5000\n}",
+      "exposed" : false
+    },
+    "search" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "senderUrl" : {
+      "type" : "urlparameter",
+      "value" : "senderUrl",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "69e69ae1-be61-44d2-aa68-83b4764cc540",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer",
+  "displayName" : "EnableDisableUser"
+}

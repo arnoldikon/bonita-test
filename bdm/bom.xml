@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel modelVersion="1.0" productVersion="7.7.4">
+    <businessObjects>
+        <businessObject qualifiedName="com.kubik.main.ConfEmail">
+            <description>Email configuration</description>
+            <fields>
+                <field type="STRING" length="255" name="smtpHost" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="smtpPort" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="username" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="password" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.kubik.main.Address">
+            <description>Address information</description>
+            <fields>
+                <field type="STRING" length="255" name="address1" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="address2" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="address3" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="address4" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="province" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="city" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="zipcode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="country" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.kubik.main.Account">
+            <description>Account configuration</description>
+            <fields>
+                <field type="STRING" length="255" name="accountName" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isActive" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Account">
+                    <fieldNames>
+                        <fieldName>accountName</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.kubik.main.Customer">
+            <fields>
+                <field type="LONG" length="255" name="customerId" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="firstName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="lastName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="placeOfBirth" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dateOfBirth" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="gender" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.kubik.main.Address" fetchType="EAGER" name="homeAddress" nullable="true" collection="false"/>
+                <field type="STRING" length="16" name="ktp" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Customer">
+                    <fieldNames>
+                        <fieldName>customerId</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

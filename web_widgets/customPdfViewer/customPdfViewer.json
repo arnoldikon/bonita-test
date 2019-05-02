@@ -1,0 +1,33 @@
+{
+  "designerVersion" : "1.2.9",
+  "id" : "customPdfViewer",
+  "name" : "pdfViewer",
+  "lastUpdate" : 1541752179936,
+  "template" : "<iframe ng-src=\"{{pdfUrl}}\" ng-style=\"{{properties.style}}\" frameborder=\"0\" scrolling=\"no\"></iframe>",
+  "controller" : "function ($scope, $sce) {\r\n    $scope.pdfUrl = null;\r\n    if (angular.isDefined($scope.properties.contentStorageId))\r\n        $scope.pdfUrl = $sce.trustAsResourceUrl(\"/\"+ $scope.properties.appName +\"/portal/formsDocumentImage?document=\"+ $scope.properties.contentStorageId);\r\n\r\n    $scope.$watch(function(){\r\n        return $scope.properties.contentStorageId;\r\n    }, function (newValue, oldValue){\r\n        if (angular.isDefined($scope.properties.contentStorageId))\r\n            $scope.pdfUrl = $sce.trustAsResourceUrl(\"/\"+ $scope.properties.appName +\"/portal/formsDocumentImage?document=\"+ $scope.properties.contentStorageId);\r\n    });\r\n}",
+  "description" : "Widget that displays a PDF from a Bonita document",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "Document contentStorageId",
+    "name" : "contentStorageId",
+    "type" : "text",
+    "defaultValue" : "context.myPDF_ref.contentStorageId",
+    "bond" : "expression"
+  }, {
+    "label" : "Application Name",
+    "name" : "appName",
+    "type" : "text",
+    "defaultValue" : "bonita",
+    "bond" : "constant"
+  }, {
+    "label" : "Style",
+    "name" : "style",
+    "type" : "text",
+    "defaultValue" : "{'width':'100%', 'height':'500px'}",
+    "bond" : "expression"
+  } ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

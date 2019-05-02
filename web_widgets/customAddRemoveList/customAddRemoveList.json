@@ -1,0 +1,41 @@
+{
+  "designerVersion" : "1.7.69",
+  "id" : "customAddRemoveList",
+  "name" : "addRemoveList",
+  "lastUpdate" : 1541752140691,
+  "template" : "\n<span ng-if=\"environment\"><identicon name=\"{{environment.component.id}}\" size=\"30\" background-color=\"[255,255,255, 0]\" foreground-color=\"[51,51,51]\"></identicon> {{environment.component.name}}</span>\n\n<div ng-if=\"properties.display=='Vertical'\">\n<center>\n    <button class=\"btn btn-primary\" ng-click=\"add()\"><span class=\"glyphicon glyphicon-chevron-right\"></span></button><br/><br/>\n    <button class=\"btn btn-primary\" ng-click=\"remove()\"><span class=\"glyphicon glyphicon-chevron-left\"></span></button>\n</center>\n</div>\n<div ng-if=\"properties.display=='Horizontal'\">\n    <button class=\"btn btn-primary\" ng-click=\"add()\"><span class=\"glyphicon glyphicon-plus-sign\"></span></button>\n    <button class=\"btn btn-primary\" ng-click=\"remove()\"><span class=\"glyphicon glyphicon-minus-sign\"></span></button>\n</div>",
+  "controller" : "function ($scope) {\n    $scope.add = function(){\n        $scope.properties.listResult.push($scope.properties.selectedSource);\n        $scope.properties.listSource.splice($scope.properties.listSource.indexOf($scope.properties.selectedSource),1);\n    };\n    $scope.remove = function(){\n        $scope.properties.listSource.push($scope.properties.selectedResult);\n        $scope.properties.listResult.splice($scope.properties.listResult.indexOf($scope.properties.selectedResult),1);\n    };\n}",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "List Source",
+    "name" : "listSource",
+    "type" : "text",
+    "bond" : "variable"
+  }, {
+    "label" : "Selected Source",
+    "name" : "selectedSource",
+    "type" : "text",
+    "bond" : "expression"
+  }, {
+    "label" : "List Result",
+    "name" : "listResult",
+    "type" : "text",
+    "bond" : "variable"
+  }, {
+    "label" : "SelectedResult",
+    "name" : "selectedResult",
+    "type" : "text",
+    "bond" : "expression"
+  }, {
+    "label" : "Display",
+    "name" : "display",
+    "type" : "choice",
+    "defaultValue" : "Vertical",
+    "choiceValues" : [ "Vertical", "Horizontal" ],
+    "bond" : "constant"
+  } ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

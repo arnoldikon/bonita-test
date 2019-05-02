@@ -1,0 +1,25 @@
+{
+  "designerVersion" : "1.7.69",
+  "id" : "customButtonGroup",
+  "name" : "buttonGroup",
+  "lastUpdate" : 1541752159159,
+  "template" : "<span ng-if=\"environment\"><identicon name=\"{{environment.component.id}}\" size=\"30\" background-color=\"[255,255,255, 0]\" foreground-color=\"[51,51,51]\"></identicon> {{environment.component.name}}</span>\n\n<center>\n<div class=\"btn-group\" role=\"group\">\n  <button ng-repeat=\"label in properties.listLabel\" type=\"button\" class=\"btn btn-{{label==properties.onClick ? 'success' : 'primary'}}\" ng-click=\"properties.onClick=label\">{{label}}</button>\n</div>\n</center>",
+  "controller" : "function ($scope) {\n\n}",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "List Label",
+    "name" : "listLabel",
+    "type" : "collection",
+    "defaultValue" : [ "Left", "Middle", "Right" ],
+    "bond" : "expression"
+  }, {
+    "label" : "On Click",
+    "name" : "onClick",
+    "type" : "text",
+    "bond" : "variable"
+  } ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

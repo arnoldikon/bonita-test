@@ -1,0 +1,139 @@
+{
+  "designerVersion" : "1.8.40",
+  "id" : "Customer",
+  "name" : "Customer",
+  "lastUpdate" : 1556767540677,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "header" : {
+        "type" : "constant",
+        "value" : "Customer"
+      },
+      "subHeader" : {
+        "type" : "constant"
+      },
+      "iconClass" : {
+        "type" : "constant",
+        "value" : "fas fa-user"
+      }
+    },
+    "reference" : "736e8e0c-7819-4374-ac26-7f6a5b285f91",
+    "hasValidationError" : false,
+    "id" : "customHeader"
+  } ], [ {
+    "type" : "formContainer",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      }
+    },
+    "reference" : "1e2fe8f8-8ce4-4387-a459-89812631c55e",
+    "hasValidationError" : false,
+    "id" : "pbFormContainer",
+    "container" : {
+      "type" : "container",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : { },
+      "reference" : "a54c2a74-bff0-41c2-8f4e-3be6d2455949",
+      "hasValidationError" : false,
+      "id" : "pbContainer",
+      "rows" : [ [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "header" : {
+            "type" : "constant",
+            "value" : [ "Id", "Fullname", "Date of Birth", "KTP" ]
+          },
+          "columnKey" : {
+            "type" : "constant",
+            "value" : [ "customerId", "firstName + \" \" + lastName", "dateOfBirth", "ktp" ]
+          },
+          "columnImage" : {
+            "type" : "constant",
+            "value" : [ ]
+          },
+          "businessData" : {
+            "type" : "constant",
+            "value" : "com.kubik.main.Customer"
+          },
+          "queryName" : {
+            "type" : "constant",
+            "value" : "find"
+          },
+          "filters" : {
+            "type" : "constant",
+            "value" : [ ]
+          },
+          "isAction" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "processAdd" : {
+            "type" : "constant",
+            "value" : "ACT_CreateCustomer"
+          },
+          "processEdit" : {
+            "type" : "constant",
+            "value" : "ACT_UpdateCustomer"
+          },
+          "urlOverview" : {
+            "type" : "constant"
+          },
+          "style" : {
+            "type" : "constant",
+            "value" : "primary"
+          }
+        },
+        "reference" : "d3ec879d-2736-45ac-9590-d30fa708d184",
+        "hasValidationError" : false,
+        "id" : "customTableFeed"
+      } ] ]
+    }
+  } ] ],
+  "assets" : [ {
+    "id" : "fe7a20a6-e6e2-4f8e-9758-5b7b25ffb2f3",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : { },
+  "hasValidationError" : false,
+  "uuid" : "4e109666-16f1-466b-a8d3-2bc3bbb67b42",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

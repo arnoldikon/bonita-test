@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: My project
+Bundle-SymbolicName: myProject
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Bonitasoft S.A.
+Require-Bundle: org.bonitasoft.studio.console.libs
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

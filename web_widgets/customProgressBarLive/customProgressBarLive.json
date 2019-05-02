@@ -1,0 +1,51 @@
+{
+  "designerVersion" : "1.2.19",
+  "id" : "customProgressBarLive",
+  "name" : "progressBarLive",
+  "lastUpdate" : 1541752254021,
+  "template" : "<!DOCTYPE HTML>\n<span ng-if=\"environment\"><identicon name=\"{{environment.component.id}}\" size=\"30\" background-color=\"[255,255,255, 0]\" foreground-color=\"[51,51,51]\"></identicon> {{environment.component.name}}</span>\n\n<div>\n    <center>\n        <b>{{properties.title}}</b>\n        <uib-progressbar class=\"progress-striped active\" max=\"max\" value=\"dynamic\" type=\"{{properties.style}}\"><span style=\"color:white; white-space:nowrap;\">{{dynamic}} / {{max}} {{properties.measure}}</span></uib-progressbar>\n    </center>\n</div>",
+  "controller" : " function($scope,$interval,$http){\n    if($scope.dynamic==null){\n        $scope.dynamic=0;\n    }\n    \n    //Refresh Data\n    $interval(\n        function(){\n            $http.get($scope.properties.api)\n                .then(function(response) {\n                    \n                var result = response.data;\n                $scope.dynamic = result[0].progress;\n                if($scope.properties.measure==\"%\"){$scope.max=100;}\n                else{$scope.max = parseInt(result[0].refer);}\n            });    \n        },$scope.properties.interval);\n }",
+  "description" : "Progress Bar Dynamic",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "Style",
+    "name" : "style",
+    "type" : "choice",
+    "defaultValue" : "primary",
+    "choiceValues" : [ "primary", "success", "info", "warning", "danger" ],
+    "bond" : "expression"
+  }, {
+    "label" : "Refresh Time",
+    "name" : "interval",
+    "caption" : "in milliseconds",
+    "type" : "integer",
+    "bond" : "expression"
+  }, {
+    "label" : "External API",
+    "name" : "api",
+    "type" : "text",
+    "bond" : "expression"
+  }, {
+    "label" : "Title",
+    "name" : "title",
+    "type" : "text",
+    "bond" : "expression"
+  }, {
+    "label" : "Measure",
+    "name" : "measure",
+    "type" : "choice",
+    "defaultValue" : "%",
+    "choiceValues" : [ "records", "%" ],
+    "bond" : "constant"
+  } ],
+  "assets" : [ {
+    "id" : "7defbf2e-f2bd-4432-917e-19e410472c07",
+    "name" : "ui-bootstrap-tpls-2.3.1.min.js",
+    "type" : "js",
+    "order" : 3,
+    "external" : false
+  } ],
+  "requiredModules" : [ "ui.bootstrap" ],
+  "type" : "widget",
+  "hasHelp" : false
+}

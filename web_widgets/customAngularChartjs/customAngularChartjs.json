@@ -1,0 +1,97 @@
+{
+  "designerVersion" : "1.3.25",
+  "id" : "customAngularChartjs",
+  "name" : "angularChartjs",
+  "lastUpdate" : 1541752135800,
+  "template" : "<!DOCTYPE HTML>\n<span ng-if=\"environment\"><identicon name=\"{{environment.component.id}}\" size=\"30\" background-color=\"[255,255,255, 0]\" foreground-color=\"[51,51,51]\"></identicon> {{environment.component.name}}</span>\n\n<div>\n    <canvas class=\"chart-base\" chart-type=\"properties.type\" chart-data=\"properties.data\" chart-labels=\"properties.labels\" chart-series=\"properties.series\" chart-options=\"options\" chart-colors=\"colorSeries\"></canvas>\n</div>",
+  "controller" : "function($scope){\n    \n    // Colour Series\n    if($scope.properties.colorSeries==\"Series 1\"){\n        $scope.colorSeries=['#3599B8','#8AD4EB','#A66999','#01B8AA','#F2C80F','#949FB1','#FD625E'];\n    }\n    if($scope.properties.colorSeries==\"Series 2\"){\n        $scope.colorSeries=['#4AC5B8','#5F686D','#FB8281','#F4D25A','#7F898A','#A4DDEE','#FDAB89'];\n    }\n    if($scope.properties.colorSeries==\"Series 3\"){\n        $scope.colorSeries=[\"#3e95cd\", \"#8e5ea2\",\"#3cba9f\",\"#e8c3b9\",\"#c45850\"];\n    }\n    if($scope.properties.colorSeries==\"Series 4\"){\n        $scope.colorSeries=['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce','#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];\n    }\n    if($scope.properties.colorSeries==\"Series 5\"){\n        $scope.colorSeries=['#535AD7','#FF402C','#83BFFF','#6EDB8F,','#FFE366'];\n    }\n    if($scope.properties.colorSeries==\"Series 6\"){\n        $scope.colorSeries=['#FFC266','#D284BD','#878$DB','#FF7B65','#CAEEFC'];\n    }\n    if($scope.properties.colorSeries==\"Series 7\"){\n        $scope.colorSeries=['#9ADBAD','#FFF1B2','#FFE0B2','#FFBEB2','#B1AFDB'];\n    }\n    \n    \n    else{}\n    \n    var x=[];\n    var y=[];\n    if($scope.properties.type==\"bar\"){\n        x=[{\n            position: 'bottom',\n            ticks: {\n                min: 1,\n                max: $scope.properties.labels.length\n            },\n            scaleLabel: {\n                display: true,\n                labelString: $scope.properties.xLabel\n            }\n                \n        }];\n        y=[{\n            ticks: {\n                callback: function(label){\n                return formatNumber(label);\n                }\n            },\n            scaleLabel: {\n                display: true,\n                labelString: $scope.properties.yLabel\n                }\n            }\n        ];\n    }\n    else if($scope.properties.type==\"horizontalBar\"){\n        x=[{\n            position: 'bottom',\n            ticks: {\n                callback: function(label){\n                return formatNumber(label);\n                }\n            },\n            scaleLabel: {\n                display: true,\n                labelString: $scope.properties.xLabel\n            }\n        }];\n        y=[{\n            scaleLabel: {\n                display: true,\n                labelString: $scope.properties.yLabel\n                }\n            }\n        ];\n    }\n    \n    if($scope.properties.series.length==1 && $scope.properties.type==\"bar\" || $scope.properties.type==\"horizontalBar\" || $scope.properties.type==\"line\"){\n        $scope.legend=false;\n        \n    } \n    else{\n        $scope.legend=$scope.properties.legend;\n    }\n    \n    //Options\n    $scope.options = {\n        //Legend\n        legend: {\n            display: $scope.legend,\n            position :$scope.properties.position\n        },\n        //Tooltips\n        tooltips: {\n            enabled: true,\n            mode: 'single',\n            callbacks: {\n                label: function(tooltipItem, data) {\n                var label = data.labels[tooltipItem.index];\n                var datasetLabel = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];\n                return label + ': ' + formatNumber(datasetLabel) ;\n                }\n            }\n        },\n        //Scales\n        scales: {\n            \n            //X-Axis\n            xAxes: x,\n            //Y-Axis\n            yAxes:y\n        }\n            \n    };\n}",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "Chart Type",
+    "name" : "type",
+    "type" : "choice",
+    "defaultValue" : "pie",
+    "choiceValues" : [ "bar", "horizontalBar", "pie", "doughnut", "line" ],
+    "bond" : "constant"
+  }, {
+    "label" : "Chart Title",
+    "name" : "title",
+    "type" : "text",
+    "defaultValue" : "Chart Name",
+    "bond" : "constant"
+  }, {
+    "label" : "Chart Series",
+    "name" : "series",
+    "type" : "collection",
+    "defaultValue" : [ "Series A" ],
+    "choiceValues" : [ "default", "series1" ],
+    "bond" : "expression"
+  }, {
+    "label" : "Chart Labels",
+    "name" : "labels",
+    "type" : "collection",
+    "defaultValue" : [ "Label 1", "Label 2", "Label 3" ],
+    "bond" : "expression"
+  }, {
+    "label" : "Show Legend",
+    "name" : "legend",
+    "type" : "boolean",
+    "defaultValue" : true,
+    "bond" : "constant"
+  }, {
+    "label" : "Legend Position",
+    "name" : "position",
+    "type" : "choice",
+    "defaultValue" : "right",
+    "choiceValues" : [ "top", "bottom", "left", "right" ],
+    "bond" : "constant"
+  }, {
+    "label" : "Data",
+    "name" : "data",
+    "caption" : "[10,20,30] for pie and doughnut or [[10,20,30],[20,30,40]] for line / bar / horizontalBar",
+    "type" : "collection",
+    "defaultValue" : [ "10", "30", "60" ],
+    "bond" : "expression"
+  }, {
+    "label" : "X-Label",
+    "name" : "xLabel",
+    "caption" : "X axis label for bar, horizontalBar and line",
+    "type" : "text",
+    "bond" : "constant"
+  }, {
+    "label" : "Y-Label",
+    "name" : "yLabel",
+    "caption" : "Y axis label for bar, horizontalBar and line",
+    "type" : "text",
+    "bond" : "constant"
+  }, {
+    "label" : "Color Series",
+    "name" : "colorSeries",
+    "type" : "choice",
+    "defaultValue" : "Default",
+    "choiceValues" : [ "Default", "Series 1", "Series 2", "Series 3", "Series 4", "Series 5", "Series 6", "Series 7", "Series 8", "Series 9", "Series 10" ],
+    "bond" : "constant"
+  } ],
+  "assets" : [ {
+    "id" : "d8cffbd9-2309-4ed5-8759-04e939cc76d2",
+    "name" : "Chart.min.js",
+    "type" : "js",
+    "order" : 7,
+    "external" : false
+  }, {
+    "id" : "6d4bc2ec-a90a-44a9-accc-3886290dd306",
+    "name" : "angular-chart.min.js",
+    "type" : "js",
+    "order" : 8,
+    "external" : false
+  }, {
+    "id" : "3eb5ba41-d0ce-428b-a27a-d1691b85b664",
+    "name" : "script-ui.js",
+    "type" : "js",
+    "order" : 9,
+    "external" : false
+  } ],
+  "requiredModules" : [ "chart.js" ],
+  "type" : "widget",
+  "hasHelp" : false
+}
